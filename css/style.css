@@ -50,9 +50,9 @@ body {
 }
 
 #container img {
-  -webkit-animation: fade-in 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) 2s 6
+  -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s 10
     alternate-reverse both;
-  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) 2s 6
+  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s 10
     alternate-reverse both;
 }
 
