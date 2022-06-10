@@ -19,13 +19,13 @@
 
 body {
   background: var(--bg-color);
-  color: var(--title);
+  color: var(--titleAndText);
   font-family: sans-serif;
   text-align: center;
 }
 
 .wrapper {
-  width: 100%;
+  width: 100vw;
   max-width: 49rem;
 
   margin-inline: auto;
@@ -80,15 +80,19 @@ body {
 #container header h1 {
   margin-top: 3rem;
   margin-bottom: 1rem;
-  font-size: 4rem;
+
+  font-size: 3.5rem;
   color: var(--titleAndText);
+
   opacity: 0.9;
 }
 
 #container header p {
   margin-bottom: 4rem;
+
   font-size: 1.8rem;
   color: var(--titleAndText);
+
   opacity: 0.7;
 }
 
@@ -125,6 +129,18 @@ button {
 .question-future button:hover {
   filter: brightness(1.2);
   box-shadow: var(--button-color) 0 0 1.6rem;
+}
+
+#answer {
+  margin-top: 3rem;
+
+  transition: opacity 1000ms;
+}
+
+#answer div {
+  font: 1.6rem normal;
+  opacity: 0.9;
+  margin-bottom: 1rem;
 }
 
 #bg {

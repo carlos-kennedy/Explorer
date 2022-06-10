@@ -44,12 +44,14 @@
                     <label class="sr-only" for="question">
                         Digite a sua pergunta:
                     </label>
-                    <input type="text" name="" id="question" placeholder="Digite sua pergunta">
-                    <button>
+                    <input id="inputQuestion" type="text" name="" id="question" placeholder="Digite sua pergunta">
+                    <button id="questionButton" onclick="makeAnswers()">
                         Fazer pergunta
                     </button>
                 </div>
 
+                <h2 id="answer">
+                </h2>
             </div>
 
             <div id="bg">
@@ -71,6 +73,7 @@
     </section>
 
 
+    <script src="./main.js"></script>
 </body>
 
 </html>
