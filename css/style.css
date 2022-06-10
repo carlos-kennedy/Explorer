@@ -56,8 +56,9 @@ body {
 
   transform: scaleX(-1);
 
-  -webkit-animation: fade-out-left 1s cubic-bezier(0.19, 1, 0.22, 1) 1s 1 both;
-  animation: fade-out-left 1s cubic-bezier(0.19, 1, 0.22, 1) 1s 1 both;
+  -webkit-animation: fade-out-left 1s cubic-bezier(0.19, 1, 0.22, 1) 1s 2
+    alternate both;
+  animation: fade-out-left 1s cubic-bezier(0.19, 1, 0.22, 1) 1s 2 alternate both;
 }
 
 #container .smoke-rigth {
@@ -65,9 +66,10 @@ body {
 
   transform: scaleX(1);
 
-  -webkit-animation: fade-out-right 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s
-    both;
-  animation: fade-out-right 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
+  -webkit-animation: fade-out-right 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s 2
+    alternate both;
+  animation: fade-out-right 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s 2
+    alternate both;
 }
 
 #container .crystal-ball {
