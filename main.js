@@ -5,14 +5,14 @@ const answerElement = document.querySelector("#answer");
 const inputQuestion = document.querySelector("#inputQuestion");
 const questionButton = document.querySelector("#questionButton");
 const answers = [
-  "Para a sua pergunta e para você nesta vida, você pode sim!",
+  "Para a sua esta sua pergunta nesta vida, você pode sim!",
   "Você pode, basta acreditar em sí para isso!",
   "Somente o vento e o tempo poderia lhe conceder este desejo tão almejado!",
   "Para você é um grande sim!",
-  "Não há medo que lhe empeça de concluir seu objetivo atual, desde que não haja tristeza em seu caminho!",
-  "Certifico que você possui uma aura de cor e brilho lindo, e nada e ninguem pode para você.",
-  "Não pense muito, faça muito.",
-  "O vento diz que não nesta vida..possivelmente na outra, mas se quiser tentar nesta vida, você deve correr e se empenhar mais. ",
+  "Não há medo que lhe impeça de concluir seu objetivo atual, coloque dentro do seu coração que você pode, apenas foque nisso.",
+  "Certifico que você possui uma aura com uma cor e brilho lindo, e nada e ninguem pode parar você.",
+  "Não pense muito nisso, apenas faça muito do que você goste.",
+  "O vento diz que não nesta vida..possivelmente na outra, mas se quiser tentar nesta vida, você deve correr e se empenhar mais.",
   "Você não usou sua fé o suficiente para perguntar...",
   "Para não lhe garantir uma certeza mal esperada, me disseram melhor não contar agora..",
 ];
@@ -44,5 +44,5 @@ function makeAnswers() {
   setTimeout(function () {
     answerElement.style.opacity = 0;
     questionButton.removeAttribute("disabled");
-  }, 4500);
+  }, 10000);
 }

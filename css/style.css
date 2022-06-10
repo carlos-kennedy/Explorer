@@ -19,6 +19,7 @@
 
 body {
   background: var(--bg-color);
+
   color: var(--titleAndText);
   font-family: sans-serif;
   text-align: center;
@@ -245,5 +246,21 @@ button {
 
     filter: blur(5rem);
     opacity: 0;
+  }
+}
+
+/* ===========RESPONSIVIDADE */
+
+@media (min-width: 280px) {
+  .wrapper {
+    overflow: hidden;
+  }
+
+  #container {
+    margin-top: 3.5rem;
+  }
+
+  #container img {
+    width: 8rem;
   }
 }
