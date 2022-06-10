@@ -8,9 +8,9 @@
 }
 
 :root {
-  --bg-color: hsl(300, 100%, 0%);
+  --bg-color: hsl(0, 0%, 0%);
 
-  --button-color: hsl(267, 64%, 46%);
+  --button-color: #6e2ac0;
 
   --titleAndText: hsl(300, 2%, 91%);
 
@@ -25,17 +25,13 @@ body {
 }
 
 .wrapper {
-  width: 80%;
+  width: 100%;
   max-width: 49rem;
 
   margin-inline: auto;
 }
 
 /* ===========HIDDEN LABEL=========== */
-
-#container {
-  margin-top: 10rem;
-}
 
 .sr-only {
   position: absolute;
@@ -49,10 +45,35 @@ body {
   border-width: 0;
 }
 
-#container img {
-  -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s 10
+/* ===========CONTAINER=========== */
+
+#container {
+  margin-top: 10rem;
+}
+
+#container .smoke-left {
+  max-width: 10rem;
+
+  transform: scaleX(-1);
+
+  -webkit-animation: fade-out-left 1s cubic-bezier(0.19, 1, 0.22, 1) 1s 1 both;
+  animation: fade-out-left 1s cubic-bezier(0.19, 1, 0.22, 1) 1s 1 both;
+}
+
+#container .smoke-rigth {
+  max-width: 10rem;
+
+  transform: scaleX(1);
+
+  -webkit-animation: fade-out-right 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s
+    both;
+  animation: fade-out-right 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
+}
+
+#container .crystal-ball {
+  -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.1s 2
     alternate-reverse both;
-  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) 1s 10
+  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.1s 2
     alternate-reverse both;
 }
 
@@ -75,7 +96,7 @@ body {
 button {
   display: block;
   margin-inline: auto;
-  width: 100%;
+  width: 80%;
   padding: 2rem;
 
   border-radius: 0.4rem;
@@ -87,6 +108,10 @@ button {
   margin-bottom: 2rem;
 }
 
+.question-future input:focus-within {
+  box-shadow: inset var(--bg-color) 0 0 0.5rem;
+}
+
 .question-future button {
   background: var(--button-color);
   color: var(--titleAndText);
@@ -94,13 +119,30 @@ button {
   cursor: pointer;
 
   transition: filter 820ms;
-  transition: ease-in-out box-shadow 950ms;
+  transition: ease-in-out box-shadow 500ms;
 }
 
 .question-future button:hover {
   filter: brightness(1.2);
-  box-shadow: var(--button-color) 0 0 2rem;
+  box-shadow: var(--button-color) 0 0 1.6rem;
 }
+
+#bg {
+  position: fixed;
+  left: 0;
+  bottom: -10rem;
+  z-index: -1;
+}
+
+#bg svg:nth-child(2) {
+  position: fixed;
+  right: 0;
+  top: -9rem;
+  transform: scaleX(-1) scaleY(-1);
+  z-index: -1;
+}
+
+/* ===========KEYFRAMES ANIMATIONS */
 
 @-webkit-keyframes fade-in {
   0% {
@@ -111,6 +153,7 @@ button {
     opacity: 1;
   }
 }
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -118,5 +161,73 @@ button {
 
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    transform: scaleX(-1);
+
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    transform: scaleX(-1);
+
+    filter: blur(5rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0) scaleX(-1);
+
+    opacity: 0.8;
+  }
+
+  100% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px) scaleX(-1);
+
+    filter: blur(5rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+
+    filter: blur(5rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+
+    filter: blur(5rem);
+    opacity: 0;
   }
 }
