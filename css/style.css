@@ -10,7 +10,7 @@
 :root {
   --bg-color: hsl(0, 0%, 0%);
 
-  --button-color: #6e2ac0;
+  --button-color: hsl(267, 64%, 46%);
 
   --titleAndText: hsl(300, 2%, 91%);
 
@@ -134,7 +134,7 @@ button {
 
 #answer {
   margin-top: 3rem;
-
+  padding: 1rem;
   transition: opacity 1000ms;
 }
 
@@ -251,7 +251,7 @@ button {
 
 /* ===========RESPONSIVIDADE */
 
-@media (min-width: 280px) {
+@media (max-width: 425px) {
   .wrapper {
     overflow: hidden;
   }

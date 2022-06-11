@@ -1,24 +1,19 @@
-// Quais são minhas variáveis?
-// Quais são os meus tipos de dados de entrada?
-// Quais são os meus tipos de dados de saída?
+const answerBgShow = document.querySelector(".answerBgShow");
 const answerElement = document.querySelector("#answer");
 const inputQuestion = document.querySelector("#inputQuestion");
 const questionButton = document.querySelector("#questionButton");
 const answers = [
-  "Para a sua esta sua pergunta nesta vida, você pode sim!",
+  "Claro que você pode!",
   "Você pode, basta acreditar em sí para isso!",
   "Somente o vento e o tempo poderia lhe conceder este desejo tão almejado!",
   "Para você é um grande sim!",
   "Não há medo que lhe impeça de concluir seu objetivo atual, coloque dentro do seu coração que você pode, apenas foque nisso.",
   "Certifico que você possui uma aura com uma cor e brilho lindo, e nada e ninguem pode parar você.",
   "Não pense muito nisso, apenas faça muito do que você goste.",
-  "O vento diz que não nesta vida..possivelmente na outra, mas se quiser tentar nesta vida, você deve correr e se empenhar mais.",
+  "O vento diz que não nesta vida..possivelmente você deve correr e se empenhar mais.",
   "Você não usou sua fé o suficiente para perguntar...",
-  "Para não lhe garantir uma certeza mal esperada, me disseram melhor não contar agora..",
+  "Para não lhe garantir uma incerteza esperada, me disseram que é melhor não contar por agora..",
 ];
-
-console.log(randomNumbers);
-// console.log(totalAnswer);
 
 function makeAnswers() {
   if (inputQuestion.value == "") {
@@ -30,7 +25,7 @@ function makeAnswers() {
 
   const questions = "<div>" + inputQuestion.value + "</div>";
 
-  // Gerar número aleatório apartir de agora
+  // Gerar número aleatório
   const totalAnswers = answers.length;
   const randomNumbers = Math.floor(Math.random() * totalAnswers);
   console.log(answers[randomNumbers]);
